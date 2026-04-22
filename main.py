@@ -21,7 +21,7 @@ from openai import OpenAI
 # CONFIG
 # ==============================
 
-EXCEL_PATH = "/Users/swetaratnani6/Desktop/New_Supplmentary_ACM1/dataset/file3.xlsx"
+EXCEL_PATH = ""
 
 # ✅ Use env vars (do NOT hardcode keys)
 OPENROUTER_API_KEY = "" #gemini-2.0-flash-lite
@@ -192,7 +192,7 @@ class GeminiStrategy(ModelStrategy):
             )
             print(f"grp {grp} resp {resp.text}")
             body = resp.text
-            file_name_temp = f"ujjvalsh-results-unstructured.csv"
+            file_name_temp = f"results-unstructured.csv"
             file_exists = os.path.exists(file_name_temp)
             with open(file_name_temp, "a", encoding="utf-8", newline="") as f:
                 writer = csv.writer(f)
@@ -327,7 +327,7 @@ class GroqLlamaStrategy(ModelStrategy):
                 )
                 print(f"grp {grp} resp {resp.choices[0].message.content}")
                 last_text = resp.choices[0].message.content
-                file_name_temp = "ujjvalsh-results-unstructured.csv"
+                file_name_temp = "results-unstructured.csv"
                 file_exists = os.path.exists(file_name_temp)
                 with open(file_name_temp, "a", encoding="utf-8", newline="") as f:
                     writer = csv.writer(f)
