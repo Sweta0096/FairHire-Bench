@@ -54,4 +54,4 @@ Results are saved as `{model_name}-results.csv`.
 - Lingyao Li — University of South Florida
 - Yitian Lou — University of Waterloo
 - Mingyang Li — University of South Florida
-- Kaixun Hua — University of South Florida · khua@usf.edu *(corresponding author)*
+- Kaixun Hua — University of South Florida
